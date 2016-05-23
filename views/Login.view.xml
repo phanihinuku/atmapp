@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ipms.atm.app.controllers.Login" 
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:form="sap.ui.commons.form">
+	<App>
+		<pages>
+			<Page title="Login">
+				<content>
+					<form:SimpleForm width="50%" maxContainerCols="3" layout="ResponsiveLayout">
+						<form:title> <core:Title></core:Title></form:title>
+						<form:content>
+						<Input id="idUsername" type="Text" placeholder="Username" width="50%"></Input>
+						<Input id="idPassword" type="Password" placeholder="Password" width="50%"></Input>
+						<Button id="idLogin" text="Login" width="50%"></Button>
+						</form:content>
+						<form:title> <core:Title></core:Title></form:title>
+					</form:SimpleForm>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft><Label text="@SAP ..."></Label></contentLeft>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

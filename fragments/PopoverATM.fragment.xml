@@ -1,0 +1,192 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Popover placement="Auto" showHeader="false" contentWidth="400px" contentHeight="500px">
+		<NavContainer width="100%" height="100%" class="sapUiSmallMarginBottom" id="atm-details-popup-nc">
+			<Page id="atm-details-popup-page-1" icon="/images/user.png" class="atm-details-popup-page page-1" title="{selectedATMModel>/id}">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<Image src="{selectedATMModel>/img}" class="atm-details-popup-page-1-content-icon-img"/>
+							<Label class="atm_header_text_bold" text="{selectedATMModel>/id}"></Label>
+						</contentLeft>
+						<contentMiddle></contentMiddle>
+						<contentRight>
+							<Image src="{selectedATMModel>/status-icon}" class="atm-details-popup-page-1-content-icon-img"/>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<VBox class="atm-details-popup-page-1-content">
+						<HBox class="atm-details-popup-page-1-content-top">
+							<Image src="{selectedATMModel>/gaurd/img}" class="atm-details-popup-page-1-content-top-img"/>
+							<VBox class="atm-details-popup-page-1-content-top-meta">
+								<HBox class="atm-details-popup-page-1-content-top-meta-single atm-id">
+								<HBox>
+								    
+								   <html:embed src="https://www.youtube.com/embed" height="100px" width="200px"></html:embed>
+                                    <!--<Panel expandable="true" text= "address" expanded="false" width="auto">
+                                        <content>
+                                            <Label  text="{i18n>atm_details_popover_label_location} : " />
+                                            <Label text="{selectedATMModel>/location/area} {selectedATMModel>/location/city}" />
+                                        </content>
+                                    </Panel>-->
+                                </HBox>
+                                </HBox>
+								<!--<HBox class="atm-details-popup-page-1-content-top-meta-single gaurd-name">
+                                    <Label class="label" text="{i18n>atm_details_popover_label_gaurd} : " />
+                                    <Label class="value" text="{selectedATMModel>/gaurd/name}" />
+                                </HBox>
+                                <HBox class="atm-details-popup-page-1-content-top-meta-single mobile">
+                                    <Label class="label" text="{i18n>atm_details_popover_label_mobile} : " />
+                                    <Link class="value" text="{selectedATMModel>/gaurd/phone}" href="tel:{selectedATMModel>/gaurd/phone}" />
+                                </HBox>-->
+							</VBox>
+						</HBox>
+						<HBox class="atm-details-popup-page-1-content-status">
+							<Label class="label" widht="180px" text="{i18n>atm_details_popover_label_gaurd} : "/>
+							<Label class="value" widht="80px" text=" {selectedATMModel>/gaurd/name} "/>
+							<Label class="value" widht="80px" text=" {selectedATMModel>/gaurd/phone} "/>
+						</HBox>
+						<VBox>
+							<Panel expandable="true" headerText="{i18n>atm_details_popover_label_location}" expanded="false" width="auto">
+								<content>
+									<!-- <Label  text="{i18n>atm_details_popover_label_location} : " />-->
+									<VBox>
+										<Label text="{selectedATMModel>/location/area}"/>
+										<Label text="{selectedATMModel>/location/city}"/>
+									</VBox>
+								</content>
+							</Panel>
+						</VBox>
+						<!-- <VBox class="atm-details-popup-page-1-content-status sapUiSmallMarginTop">
+                            <Label class="atm-details-popup-page-1-content-status-label" text="{i18n>atm_details_popover_label_overall_status} : " />
+                            <ObjectStatus class="atm-details-popup-page-1-content-status-value" text="{ path : 'selectedATMModel>/status', formatter : '.Formatter.statusText'}" state="{ path : 'selectedATMModel>/status', formatter : '.Formatter.statusType'}" />
+                        </VBox>-->
+						<VBox class="atm-details-popup-page-1-content-location">
+							<!-- <Label class="label" text="{i18n>atm_details_popover_label_mobile} : " />-->
+							<!-- <Link class="value" text="{selectedATMModel>/gaurd/phone}" href="tel:{selectedATMModel>/gaurd/phone}" />-->
+						</VBox>
+						<!--<VBox class="atm-details-popup-page-1-content-location sapUiSmallMarginTop">
+                            <Label class="atm-details-popup-page-1-content-location-label" text="{i18n>atm_details_popover_label_location} : " />
+                            <Label class="atm-details-popup-page-1-content-location-value" text="{selectedATMModel>/location/area} {selectedATMModel>/location/city}" />
+                        </VBox>-->
+						<VBox class="atm-details-popup-page-1-content-sensors sapUiSmallMarginTop">
+							<Label class="atm-details-popup-page-1-content-sensors-label" text="{i18n>atm_details_popover_label_sensors} : "/>
+							<Panel class="atm-details-popup-page-1-content-sensors-list" content="{selectedATMModel>/sensors}">
+								<content>
+									<ObjectStatus class="sapUiSmallMarginBottom atm-details-popup-page-1-content-sensors-single"
+										text="{ path : 'selectedATMModel>type', formatter : '.Formatter.sensorText'}"
+										state="{ path : 'selectedATMModel>status', formatter : '.Formatter.statusType'}"
+										icon="{ path : 'selectedATMModel>type', formatter : '.Formatter.sensorIcon'}"/>
+								</content>
+							</Panel>
+						</VBox>
+					</VBox>
+				</content>
+				<footer>
+					<Toolbar>
+						<Button visible="{= ${selectedATMModel>/pinned}.toString() === 'false' }" icon="sap-icon://pushpin-on" press="pinToKiosk"/>
+						<Button visible="{selectedATMModel>/pinned}" type="Reject" icon="sap-icon://pushpin-off" press="deletePin"/>
+						<ToolbarSpacer/>
+						<Button text="{i18n>atm_details_popover_button_create_ticket}" press="goToActions"/>
+						<Button icon="sap-icon://call" tooltip="Call +91 99999 43210"/>
+						<Button icon="sap-icon://video" press="handlePressVideo"/>
+						<Button icon="sap-icon://task" tooltip="Ticket Management"/>
+						<Button icon="sap-icon://microphone"></Button>
+						<Button icon="sap-icon://marketing-campaign"></Button>
+					</Toolbar>
+				</footer>
+			</Page>
+			<!--<Page id="atm-details-popup-page-2" class="atm-details-popup-page page-2" navButtonPress="goToDetails"
+				title="{i18n>atm_details_popover_title_actions}" showNavButton="true">
+				<content>
+					<VBox>
+						<List>
+							<items>
+								<CustomListItem>
+									<HBox>
+										<core:Icon src="sap-icon://phone" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+										<Link class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" text="{i18n>atm_details_popover_label_call} {selectedATMModel>/gaurd/phone}"
+											press="handlePressCall"/>
+									</HBox>
+								</CustomListItem>
+								<CustomListItem>
+									<HBox>
+										<core:Icon src="sap-icon://play" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+										<Link class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" text="{i18n>atm_details_popover_label_watch_stream}" press="handlePressVideo"/>
+									</HBox>
+								</CustomListItem>
+								<CustomListItem>
+									<HBox>
+										<core:Icon src="sap-icon://task" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+										<Link class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" text="{i18n>atm_details_popover_label_ticket_management}"
+											press="handlePressTicket"/>
+									</HBox>
+								</CustomListItem>
+							</items>
+						</List>
+					</VBox>
+				</content>
+			</Page>-->
+			<Page id="atm-details-popup-page-2" class="atm-details-popup-page page-2" navButtonPress="goToDetails"
+				title="{i18n>atm_details_popover_title_create_ticket_title}" showNavButton="true">
+				<content>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormDisplay354" minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" title="Details"
+							labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+							<f:content>
+								<VBox>
+									<HBox>
+										<VBox>
+											<Label text="Subject : "/>
+										</VBox>
+										<VBox>
+											<Text text="{selectedATMModel>/id} - {selectedATMModel>/status}"></Text>
+										</VBox>
+									</HBox>
+									<HBox>
+										<VBox><Label text="Priority : "/></VBox>
+										<VBox><Text text="Critical"/></VBox>
+									</HBox>
+									<HBox>
+										<VBox><Label text="Description : "/></VBox>
+										<VBox><Text text="ATM ID – SBI"/>
+											<Text text="Location - Marathahalli, Bangalore"/>
+											<Text text="Guard - Mani Yadhav (+91 98765 43210)"/>
+											<Text text="Status – Critical"/>
+											<Text text="Possible Impact – ATM can catch fire"/>
+											<Text text="Sensor Details"/>
+											<Text text="Vibration – Normal"/>
+											<Text text="Heat – very High"/>
+											<Text text="Contact – Contact"/>
+											<!--<Text text="Motion – Normal PID – Normal"/>
+											<Text text="Door – Normal Battery – Normal"/>
+											<Text text="Smoke – High"/>
+											<Text text="Possible solution – Check for any short circuit and fix it immediately."/>-->
+										</VBox>
+									</HBox>
+										<HBox><VBox><Label text="Comments: "/></VBox>
+								<VBox>	<TextArea
+									width="300px"
+									editable="true"
+									rows="5"
+									cols="10"
+									height=""
+								></TextArea></VBox>	</HBox>
+								</VBox>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+				<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button text="Save" />
+					<Button text="Close" />
+				</content>
+			</Toolbar>
+		</footer>
+			</Page>
+		</NavContainer>
+	</Popover>
+</core:FragmentDefinition>

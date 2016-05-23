@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Dialog title="{i18n>video_dialog_title}" contentWidth="700px" contentHeight="600px" design="Bold">
+        <content>
+            <VBox class="atm-video-stream-content">
+                <Image class="atm-video-stream-content-video" src="./images/video.png"/>
+                <Carousel class="atm-video-stream-content-carousel sapUiContentPadding" loop="true">
+                    <pages>
+                        <Image class="atm-video-stream-content-carousel-image" src="./images/screenshots.png" />
+                        <Image class="atm-video-stream-content-carousel-image" src="./images/screenshots.png" />
+                        <Image class="atm-video-stream-content-carousel-image" src="./images/screenshots.png" />
+                        <Image class="atm-video-stream-content-carousel-image" src="./images/screenshots.png" />
+                    </pages>
+                </Carousel>
+            </VBox>
+        </content>
+        <buttons>
+            <Button text="{i18n>video_dialog_button_close}" press="closeVideo" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

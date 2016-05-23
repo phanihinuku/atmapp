@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+    <SplitContainer id="dashboard-page-list" initialDetail="dashboard-page-list-detail" initialMaster="dashboard-page-list-master" visible="{= ${viewData>/viewType} === 'list' }">
+        <detailPages>
+            <Page id="dashboard-page-list-detail" class="dashboard-page-list-detail sapUiStdPage" title="Details">
+                <content>
+                    <IconTabBar expanded="true" expandable="false" class="dashboard-page-list-detail-tabs" selectedKey="info" stretchContentHeight="true">
+                        <items>
+                            <IconTabFilter icon="sap-icon://hint" key="info">
+                                <core:Fragment fragmentName="ipms.atm.app.fragments.ListViewTabOne" type="XML" />
+                            </IconTabFilter>
+                            <IconTabFilter icon="sap-icon://radar-chart" key="sensors">
+                                <core:Fragment fragmentName="ipms.atm.app.fragments.ListViewTabTwo" type="XML" />
+                            </IconTabFilter>
+                            <IconTabFilter icon="sap-icon://image-viewer">
+                            </IconTabFilter>
+                        </items>
+                    </IconTabBar>
+                </content>
+            </Page>
+        </detailPages>
+        <masterPages>
+            <Page id="dashboard-page-list-master" class="dashboard-page-list-master sapUiStdPage" title="{viewData>/atm_type} ATM ({viewData>/atm_count})" icon="sap-icon://action">
+                <content>
+                    <List id="dashboard-page-list-atm" items="{atmsModel>/}" mode="SingleSelectMaster" selectionChange="onListSelectionChange">
+                        <items>
+                            <ObjectListItem title="{atmsModel>id}" type="Navigation" press="onListItemPress" number="{ path : 'atmsModel>sensors', formatter: '.criticalCount'}" numberUnit="{i18n>dashboard_page_list_view_label_critical}">
+                                <attributes>
+                                    <ObjectAttribute text="{atmsModel>name}, {atmsModel>location/area}" />
+                                    <ObjectAttribute text="{ path : 'atmsModel>sensors', formatter: '.criticalSensors'}" />
+                                </attributes>
+                            </ObjectListItem>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+    </SplitContainer>
+</core:FragmentDefinition>
