@@ -1,0 +1,792 @@
+{
+    "center": {
+        "lat": 12.960430,
+        "lng": 77.716329
+    },
+    "points": [{
+            "name": "Allahabad Bank",
+            "img": "./images/ald-icon.png",
+            "id": "ALD25471",
+            "status": "critical",
+            "status-icon":"./images/red_dot.png",
+            "location": {
+                "address": "No 135",
+                "area": "Kundalahalli Gate Signal",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.94832962,
+                "lng": 77.7143634
+            },
+            "pinned": false
+        }, {
+            "name": "HDFC Bank",
+             "img": "./images/hdfc-icon.png",
+            "id": "HDFC25471",
+            "status": "normal",
+            "status-icon":"./images/green_dot.png",
+            "location": {
+                "address": "Hypercity",
+                "area": "Kundalahalli Gate",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.96452554,
+                "lng": 77.71297643
+            },
+            "pinned": false
+        }, {
+            "name": "IndusInd Bank",
+            "id": "INI25471",
+            "status": "critical",
+            "location": {
+                "address": "No 135",
+                "area": "Outer Ring Road, Near-Indusland Bank, Marathahalli",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9567389,
+                "lng": 77.6911982
+            },
+            "pinned": false
+        },
+
+
+        {
+            "name": "Canara Bank",
+            "id": "CB25471",
+            "status": "normal",
+            "location": {
+                "address": "Sanjaya Nagar",
+                "area": "Marathahalli",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9567389,
+                "lng": 77.6911982
+            },
+            "pinned": false
+        }, {
+            "name": "State Bank of Mysore",
+            "img": "./images/sbi-icon.png",
+            "id": "SBI25471",
+            "status": "critical",
+            "status-icon":"./images/red_dot.png",
+            "location": {
+                "address": "No.1, S V M Complex, Ashwathanagar,",
+                "area": "Marathahalli",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9567490,
+                "lng": 77.6911985
+            },
+            "pinned": false
+        }, {
+            "name": "ICICI Bank",
+            "id": "ICICI1234",
+            "status": "normal",
+            "status-icon":"./images/green_dot.png",
+            "location": {
+                "address": "Outer Ring Road",
+                "area": "Bellandur",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9260308,
+                "lng": 77.6762463
+            },
+            "pinned": false
+        }, {
+            "name": "AXIS Bank",
+             "img": "./images/axis-icon.png",
+            "id": "AXIS25471",
+            "status": "medium",
+            "status-icon":"./images/orange_dot.png",
+            "location": {
+                "address": "BrandFactory, Old Airport Road",
+                "area": "Marathahalli",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "medium"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9597559,
+                "lng": 77.6912182
+            },
+            "pinned": false
+        }, {
+            "name": "CITI Bank",
+            "id": "CITI25471",
+            "status": "normal",
+            "location": {
+                "address": "Old Airport Road",
+                "area": "Marathahalli",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9597389,
+                "lng": 77.9911982
+            },
+            "pinned": false
+        }, {
+            "name": "AXIS Bank",
+             "img": "./images/sbi-icon.png",
+            "id": "AXIS12345",
+            "status": "critical",
+            "status-icon":"./images/red_dot.png",
+            "location": {
+                "address": "Varthur Main Road, Near-Akshay Mallya Hospital, ",
+                "area": "Varthur",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.9967389,
+                "lng": 77.1911982
+            },
+            "pinned": false
+        }, {
+            "name": "HDFC Bank",
+             "img": "./images/hdfc-icon.png",
+            "id": "HDFC25472",
+            "status": "normal",
+            "status-icon":"./images/green_dot.png",
+            "location": {
+                "address": "Hypercity",
+                "area": "Kundalahalli Gate",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.1567389,
+                "lng": 77.9911982
+            },
+            "pinned": false
+        }, {
+            "name": "State Bank Of India",
+             "img": "./images/sbi-icon.png",
+            "id": "SBI12345",
+            "status": "critical",
+            "status-icon":"./images/red_dot.png",
+            "location": {
+                "address": "SGR Dental College Rd, Chandra Layout, ",
+                "area": "Kundalahalli Gate Signal",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.5563389,
+                "lng": 77.2911982
+            },
+            "pinned": false
+        }, {
+            "name": "Canara Bank",
+            "id": "CB25472",
+            "status": "normal",
+            "location": {
+                "address": "Aswath Nagar",
+                "area": "Kundalahalli Gate",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.3567389,
+                "lng": 77.1111982
+            },
+            "pinned": false
+        }, {
+            "name": "ICICI Bank",
+            "id": "ICICI25472",
+            "status": "critical",
+            "location": {
+                "address": "Ashwathanagar",
+                "area": "Kundalahalli Gate Signal",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.8567389,
+                "lng": 77.1911982
+            },
+            "pinned": false
+        }, {
+            "name": "ICICI Bank",
+            "id": "ICICI25471",
+            "status": "medium",
+            "location": {
+                "address": "JP Royale- 90/4, Opposite Innovative",
+                "area": "Kundalahalli Gate",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "medium"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.7567389,
+                "lng": 77.2911982
+            },
+            "pinned": false
+        }, {
+            "name": "CITI Bank",
+            "id": "CITI25472",
+            "status": "critical",
+            "location": {
+                "address": "No 135",
+                "area": "Kundalahalli Gate Signal",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.6567389,
+                "lng": 77.3911982
+            },
+            "pinned": false
+        }, {
+            "name": "DCB Bank",
+            "id": "DCB25471",
+            "status": "normal",
+            "location": {
+                "address": "SGR Dental College Rd, Belandur,",
+                "area": "Kundalahalli Gate",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Sai Kumar",
+                "phone": "+91 99999 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.5167389,
+                "lng": 77.4211982
+            },
+            "pinned": false
+        }, {
+            "name": "Deutsche Bank",
+            "id": "DB25471",
+            "status": "critical",
+            "location": {
+                "address": "Sarjapur Main Rd, ",
+                "area": "Bellandur",
+                "city": "Bangalore",
+                "state": "Karnataka"
+            },
+            "gaurd": {
+                "name": "Mani Yadav",
+                "phone": "+91 98765 43210",
+                "img": "./images/user.png"
+            },
+            "sensors": [{
+                "type": "vibration",
+                "status": "normal"
+            }, {
+                "type": "heat",
+                "status": "critical"
+            }, {
+                "type": "contact",
+                "status": "normal"
+            }, {
+                "type": "motion",
+                "status": "normal"
+            }, {
+                "type": "pid",
+                "status": "normal"
+            }, {
+                "type": "door",
+                "status": "normal"
+            }, {
+                "type": "battery",
+                "status": "normal"
+            }, {
+                "type": "smoke",
+                "status": "critical"
+            }],
+            "pos": {
+                "lat": 12.3121811,
+                "lng": 77.8139332
+            },
+            "pinned": false
+        }
+
+    ]
+}

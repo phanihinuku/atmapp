@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Popover placement="Bottom" showHeader="false" contentWidth="300px" contentHeight="200px">
+        <List>
+            <DisplayListItem label="Total" value="{userData>/total}" type="Navigation" press="goToListView">
+                <customData>
+                    <core:CustomData key="type" value="total"/>
+                    
+                </customData>
+            </DisplayListItem>
+            <DisplayListItem label="Critical" value="{userData>/critical}" type="Navigation" press="goToListView">
+                <customData>
+                    <core:CustomData key="type" value="critical"/>
+                </customData>
+            </DisplayListItem>
+            <DisplayListItem label="Medium" value="{userData>/medium}" type="Navigation" press="goToListView">
+                <customData>
+                    <core:CustomData key="type" value="medium"/>
+                </customData>
+            </DisplayListItem>
+            <DisplayListItem label="All Ok" value="{userData>/normal}" type="Navigation" press="goToListView">
+                <customData>
+                    <core:CustomData key="type" value="normal"/>
+                </customData>
+            </DisplayListItem>
+        </List>
+    </Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+    <ObjectHeader class="dashboard-page-list-detail-header-inside" title="{selectedListATM>/id}" number="{selectedListATM>/name}">
+        <statuses>
+            <ObjectStatus text="{selectedListATM>/location/address}" state="None" />
+            <ObjectStatus text="{selectedListATM>/location/area}" state="None" />
+            <ObjectStatus text="{selectedListATM>/location/city}, {selectedListATM>/location/state}" state="None" />
+        </statuses>
+    </ObjectHeader>
+</core:FragmentDefinition>
