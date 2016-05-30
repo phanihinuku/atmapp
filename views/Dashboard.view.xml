@@ -1,55 +1,77 @@
-<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:c="sap.ui.commons" xmlns="sap.m" xmlns:l="sap.ui.layout" controllerName="ipms.atm.app.controllers.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml">
-    <Page >
-        <customHeader>
-            <Bar>
-                <contentLeft>
-                    <Label  text="{i18n>dashboard_page_title} - {i18n>app_title}" />
-                </contentLeft>
-                <contentMiddle>
-                    
-                    <Button class="header-user-section-button" app:mydata="total" text="Total-{userData>/total}" press="goToListView" />
-                    <Image class="circleButton" src="/images/green_dot.png" app:mydata="normal" press="goToListView"></Image>
-                    <Label text="{userData>/normal}"></Label>
-                    <Image class="circleButton" src="/images/orange_dot.png" app:mydata="medium" press="goToListView" />
-                    <Label text="{userData>/medium}"></Label>
-                    <Image class="circleButton" src="/images/red_dot.png" app:mydata="critical" press="goToListView" />
-                    <Label text="{userData>/critical}"></Label>
-                    
-                </contentMiddle>
-                <contentRight>
-                    <HBox class="header-user-section">
-                        <Image class="header-user-section-image" src="{userData>/img}" />
-                        <Label class="header-user-section-name" text="{userData>/name}" />
-                       <!-- <Button class="header-user-section-button" icon="sap-icon://slim-arrow-down" press="showDetails" />-->
-                    </HBox>
-                </contentRight>
-            </Bar>
-        </customHeader>
-        <content>
-            <html:div id="dashboard-page-map" class="dashboard-page-map" visible="{= ${viewData>/viewType} === 'map' }"></html:div>
-            <VBox class="dashboard-page-map-pins" items="{pinnedATMs>/}" visible="{= ${viewData>/viewType} === 'map' }">
-                <HBox class="dashboard-page-map-pins-single" width="100%">
-                    <Button text="{pinnedATMs>name}" type="Emphasized" press="openPinnedDetails" width="100%"></Button>
-                </HBox>
-            </VBox>
-            <!-- <core:Fragment fragmentName="ipms.atm.app.fragments.MapView" type="XML" /> -->
-            <core:Fragment fragmentName="ipms.atm.app.fragments.ListView" type="XML" />
-        </content>
-        <footer>
-            <Bar>
-                <contentLeft>
-                </contentLeft>
-                <contentMiddle>
-                </contentMiddle>
-                <contentRight>
-                    <Button icon="sap-icon://message-popup"  type="Emphasized"
-						press="showInfo" />
-                    <Button icon="sap-icon://filter" press="showFilters" />
-                    <Button icon="sap-icon://add-equipment" />
-                    <Button icon="sap-icon://menu" press="showListView" visible="{= ${viewData>/viewType} === 'map' }" />
-                    <Button icon="sap-icon://map-2" press="showMapView" visible="{= ${viewData>/viewType} === 'list' }" />
-                </contentRight>
-            </Bar>
-        </footer>
-    </Page>
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:c="sap.ui.commons" xmlns="sap.m" xmlns:l="sap.ui.layout" controllerName="ipms.atm.app.controllers.Dashboard"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Label text="{i18n>dashboard_page_title} - {i18n>app_title}"/>
+				</contentLeft>
+				<contentMiddle>
+					<!--<Button class="header-user-section-button" app:mydata="total" text="Total-{userData>/total}" press="goToListView" />-->
+					<!--<Image class="circleButton" src="/images/green_dot.png" app:mydata="normal" press="goToListView"></Image>-->
+					<!--<Label text="{userData>/normal}"></Label>-->
+					<!--<Image class="circleButton" src="/images/orange_dot.png" app:mydata="medium" press="goToListView" />-->
+					<!--<Label text="{userData>/medium}"></Label>-->
+					<!--<Image class="circleButton" src="/images/red_dot.png" app:mydata="critical" press="goToListView" />-->
+					<!--<Label text="{userData>/critical}"></Label>-->
+				</contentMiddle>
+				<contentRight>
+					<HBox class="header-user-section">
+						<Image class="header-user-section-image" src="{userData>/img}"/>
+						<Label class="header-user-section-name" text="{userData>/name}"/>
+						 <Button icon="sap-icon://log" press="logout" />
+					</HBox>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<html:div id="dashboard-page-map" class="dashboard-page-map" visible="{= ${viewData>/viewType} === 'map' }"></html:div>
+			<VBox class="buttonsovermap" id="dashboard-page-buttonsovermap" visible="true" >
+				<SegmentedButton id="ashboard-page-map-segmented" selectedKey="total" class="sapUiSmallMarginBottom" select="goToListView">
+					<items>
+						<SegmentedButtonItem class="dashboard-page-map-sbtotal" key="total" text="All ({userData>/total})"/>
+						<SegmentedButtonItem class="dashboard-page-map-sbnormal" text=" {userData>/normal}" key="normal"  icon="/images/Green.png"/>
+						<SegmentedButtonItem class="dashboard-page-map-sbmedium" text=" {userData>/medium}" key="medium" icon="/images/Amber.png"/>
+						<SegmentedButtonItem class="dashboard-page-map-critical" text=" {userData>/critical}" key="critical" icon="/images/Red.png"/>
+					</items>
+				</SegmentedButton>
+			</VBox>
+			<VBox class="buttonsovermap" id="dashboard-page-buttonsovermap2" visible="false">
+				<Button class="header-user-section-button" app:mydata="total" key="total" text="Total-{userData>/total}" press="goToListView"
+					type="Emphasized"/>
+				<Button class="header-user-section-button" text="Normal-{userData>/normal}" key="normal" app:mydata="normal" press="goToListView"
+					type="Accept"/>
+				<Button class="header-user-section-button" text="Medium-{userData>/medium}" app:mydata="medium" key="medium" press="goToListView"/>
+				<Button class="header-user-section-button" text="Critical-{userData>/critical}" app:mydata="critical" key="critical" press="goToListView"
+					type="Reject"/>
+				<!--<Image class="circleButton" src="/images/green_dot.png" app:mydata="normal" press="goToListView"></Image>-->
+				<!--<Label text="{userData>/normal}"></Label>-->
+				<!--<Image class="circleButton" src="/images/orange_dot.png" app:mydata="medium" press="goToListView" />-->
+				<!--<Label text="{userData>/medium}"></Label>-->
+				<!--<Image class="circleButton" src="/images/red_dot.png" app:mydata="critical" press="goToListView" />-->
+				<!--<Label text="{userData>/critical}"></Label>-->
+			</VBox>
+			<VBox class="dashboard-page-map-pins" id="dashboard-page-map-pins" items="{pinnedATMs>/}" visible="{= ${viewData>/viewType} === 'map' }">
+				<HBox class="dashboard-page-map-pins-single" width="100%">
+					<Button text="{pinnedATMs>name}" type="Emphasized" press="openPinnedDetails" width="100%"></Button>
+				</HBox>
+			</VBox>
+			<!-- <core:Fragment fragmentName="ipms.atm.app.fragments.MapView" type="XML" /> -->
+			<core:Fragment fragmentName="ipms.atm.app.fragments.ListView" type="XML"/>
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft></contentLeft>
+				<contentMiddle></contentMiddle>
+				<contentRight>
+					<Button icon="sap-icon://message-popup" type="Emphasized" press="showInfo"/>
+					<Button icon="sap-icon://filter" press="showFilters"/>
+					<Button icon="sap-icon://add-equipment"/>
+					<Button icon="sap-icon://menu" press="showListView" visible="{= ${viewData>/viewType} === 'map' }"/>
+					<Button icon="sap-icon://map-2" press="showMapView" visible="{= ${viewData>/viewType} === 'list' }"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
 </core:View>

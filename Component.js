@@ -27,6 +27,10 @@ sap.ui.define([
                     transition: "slide"
                 },
                 routes: [{
+                    pattern: "",
+                    name: "Login",
+                    target: "Login"
+                }, {
                     pattern: "dashboard",
                     name: "Dashboard",
                     target: "Dashboard"
@@ -36,6 +40,11 @@ sap.ui.define([
                     target: "Dashboard"
                 }],
                 targets: {
+                	 
+                	  Login: {
+                        viewName: "Login",
+                        viewLevel: 1
+                    },
                     Dashboard: {
                         viewName: "Dashboard",
                         viewLevel: 1

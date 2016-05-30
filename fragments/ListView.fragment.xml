@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
-    <SplitContainer id="dashboard-page-list" initialDetail="dashboard-page-list-detail" initialMaster="dashboard-page-list-master" visible="{= ${viewData>/viewType} === 'list' }">
+    <SplitContainer id="dashboard-page-list" initialDetail="dashboard-page-list-detail" initialMaster="dashboard-page-list-master" visible="{= ${viewData>/viewType} === 'list' }" class="bg">
         <detailPages>
             <Page id="dashboard-page-list-detail" class="dashboard-page-list-detail sapUiStdPage" title="Details">
                 <content>

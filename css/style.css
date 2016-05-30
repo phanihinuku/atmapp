@@ -1,40 +1,85 @@
-.header-user-section {
-
+.header-user-section {} .saturate {
+    -webkit-filter: saturate(3);
+    filter: saturate(3);
 }
 
-.atm_header_text_bold{
-    font-weight:bold;
+.mainpageBG{
+	margin-top:5%;	
 }
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.contrast {
+    -webkit-filter: contrast(160%);
+    filter: contrast(160%);
+}
+.brightness {
+    -webkit-filter: brightness(0.25);
+    filter: brightness(0.25);
+}
+.myBackgroundStyle{  
+  background:url('./images/bg.jpg');
+  background-repeat: repeat-y fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center !important;
 
-.circleButton div.sapMBtnInner  {
+ }
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+.invert {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.sepia {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+}
+.huerotate {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+}
+.rss.opacity {
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+}
+.buttonsovermap {
+       margin-left: 40% !important;
+    margin-top: 0.5rem;
+}
+.dashboard-page-map-sbtotal {
+    color: red;
+    
+}
+.bg{
+	
+}
+.atm_header_text_bold {
+    font-weight: bold;
+}
+.circleButton div.sapMBtnInner {
     height: 40px;
     width: 40px !important;
     border-radius: 50%;
     margin: 5px;
 }
-
 .header-user-section-image {
     height: 40px;
     width: 40px !important;
     border-radius: 50%;
     margin: 5px;
 }
-
-.header-user-section-name {
-
-}
-
-.header-user-section-button {
-    
-}
-
-.dashboard-page-map {
+.header-user-section-name {} .header-user-section-button {} .dashboard-page-map {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
 }
-
 .dashboard-page-map-pins {
     position: absolute;
     top: 0;
@@ -42,143 +87,92 @@
     z-index: 2;
     width: 160px;
 }
-
-.dashboard-page-map-pins-single {}
-
-.dashboard-page-map-pins-single > .sapMFlexItem {
+.dashboard-page-map-pins-single {} .dashboard-page-map-pins-single > .sapMFlexItem {
     width: 100%;
 }
-
-.atm-details-popup-page {}
-
-.atm-details-popup-page-1-content {
+.atm-details-popup-page {} .atm-details-popup-page-1-content {
     padding: 1rem;
 }
-
-.atm-details-popup-page-1-content-top {}
-
-.atm-details-popup-page-1-content-top-img {
+.atm-details-popup-page-1-content-top {} .atm-details-popup-page-1-content-top-img {
     width: 80px;
     height: 80px;
     border: 1px solid #a7a7a7;
 }
-
 .atm-details-popup-page-1-content-icon-img {
     width: 25px;
     height: 25px;
     border: 1px solid #a7a7a7;
 }
-
 .atm-details-popup-page-1-content-top-meta {
     margin: 12px;
     width: 100%;
 }
-
 .atm-details-popup-page-1-content-top-meta-single {
     width: 100%;
 }
-
 .atm-details-popup-page-1-content-top-meta-single > .sapMFlexItem {
     width: 50%;
 }
-
 .atm-details-popup-page-1-content-top-meta-single .label {
     text-align: right !important;
     width: 80%;
 }
-
-.atm-details-popup-page-1-content-top-meta .value {}
-
-.atm-details-popup-page-1-content-top-meta-single.mobile .label {
+.atm-details-popup-page-1-content-top-meta .value {} .atm-details-popup-page-1-content-top-meta-single.mobile .label {
     font-size: 80%;
     color: #c5c5c5;
 }
-
-.atm-details-popup-page-1-content-status {}
-
-.atm-details-popup-page-1-content-status-label {}
-
-.atm-details-popup-page-1-content-status-value {
+.atm-details-popup-page-1-content-status {} .atm-details-popup-page-1-content-status-label {} .atm-details-popup-page-1-content-status-value {
     font-size: 13px;
 }
-
-.atm-details-popup-page-1-content-location {}
-
-.atm-details-popup-page-1-content-location-label {}
-
-.atm-details-popup-page-1-content-location-value {
+.atm-details-popup-page-1-content-location {} .atm-details-popup-page-1-content-location-label {} .atm-details-popup-page-1-content-location-value {
     font-size: 13px;
 }
-
-.atm-details-popup-page-1-content-sensors {}
-
-.atm-details-popup-page-1-content-sensors-label {}
-
-.atm-details-popup-page-1-content-sensors-list {}
-
-.atm-details-popup-page-1-content-sensors-single {
+.atm-details-popup-page-1-content-sensors {} .atm-details-popup-page-1-content-sensors-label {} .atm-details-popup-page-1-content-sensors-list {} .atm-details-popup-page-1-content-sensors-single {
     width: 65px;
     text-align: center;
     float: left;
 }
-
 .atm-details-popup-page-1-content-sensors-single .sapMObjStatusIcon {
     display: block;
 }
-
 .atm-details-popup-page-1-content-sensors-single .sapMObjStatusText {
     font-size: 13px;
 }
-
 .atm-video-stream-content {
     position: absolute;
     top: 0;
     bottom: 0;
     overflow: hidden;
 }
-
 .atm-video-stream-content > .sapMFlexItem:first-child {
     height: 220px;
     width: 700px;
     margin: 40px 0;
 }
-
 .atm-video-stream-content-video {
     height: 220px;
     width: 420px;
     display: block;
     margin: auto;
 }
-
 .atm-video-stream-content > .sapMFlexItem:last-child {
     height: 300px;
     width: 700px;
 }
-
-.atm-video-stream-content-carousel {}
-
-.atm-video-stream-content-carousel-image {}
-
-.dashboard-page-list-detail > section {
+.atm-video-stream-content-carousel {} .atm-video-stream-content-carousel-image {} .dashboard-page-list-detail > section {
     background: rgba(0, 74, 113, 0.62);
 }
-
 .dashboard-page-list-detail-header {
     height: 190px;
     margin: 0;
     background: rgba(0, 74, 113, 0.62);
 }
-
 .dashboard-page-list-detail-header * {
     color: #fff !important;
     font-size: 100%;
 }
-
 .dashboard-page-list-detail-tabs {
     position: absolute;
     /*top: 100px;*/
 }
-
-.dashboard-page-list-detail-table-scroll {
-    
-}
+.dashboard-page-list-detail-table-scroll {}

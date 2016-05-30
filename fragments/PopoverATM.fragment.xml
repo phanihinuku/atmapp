@@ -1,4 +1,5 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml">
+<core:FragmentDefinition xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Popover placement="Auto" showHeader="false" contentWidth="400px" contentHeight="500px">
 		<NavContainer width="100%" height="100%" class="sapUiSmallMarginBottom" id="atm-details-popup-nc">
 			<Page id="atm-details-popup-page-1" icon="/images/user.png" class="atm-details-popup-page page-1" title="{selectedATMModel>/id}">
@@ -6,7 +7,7 @@
 					<Bar>
 						<contentLeft>
 							<Image src="{selectedATMModel>/img}" class="atm-details-popup-page-1-content-icon-img"/>
-							<Label class="atm_header_text_bold" text="{selectedATMModel>/id}"></Label>
+							<Label class="atm_header_text_bold" text="{selectedATMModel>/id} {selectedATMModel>/location/area} {selectedATMModel>/location/city}"></Label>
 						</contentLeft>
 						<contentMiddle></contentMiddle>
 						<contentRight>
@@ -17,20 +18,19 @@
 				<content>
 					<VBox class="atm-details-popup-page-1-content">
 						<HBox class="atm-details-popup-page-1-content-top">
-							<Image src="{selectedATMModel>/gaurd/img}" class="atm-details-popup-page-1-content-top-img"/>
+							<Image src="{selectedATMModel>/gaurd/img}" class="atm-details-popup-page-1-content-top-img" visible="false"/>
 							<VBox class="atm-details-popup-page-1-content-top-meta">
 								<HBox class="atm-details-popup-page-1-content-top-meta-single atm-id">
-								<HBox>
-								    
-								   <html:embed src="https://www.youtube.com/embed" height="100px" width="200px"></html:embed>
-                                    <!--<Panel expandable="true" text= "address" expanded="false" width="auto">
+									<HBox>
+										<html:embed src="https://www.youtube.com/embed" height="100px" width="200px"></html:embed>
+										<!--<Panel expandable="true" text= "address" expanded="false" width="auto">
                                         <content>
                                             <Label  text="{i18n>atm_details_popover_label_location} : " />
                                             <Label text="{selectedATMModel>/location/area} {selectedATMModel>/location/city}" />
                                         </content>
                                     </Panel>-->
-                                </HBox>
-                                </HBox>
+									</HBox>
+								</HBox>
 								<!--<HBox class="atm-details-popup-page-1-content-top-meta-single gaurd-name">
                                     <Label class="label" text="{i18n>atm_details_popover_label_gaurd} : " />
                                     <Label class="value" text="{selectedATMModel>/gaurd/name}" />
@@ -41,22 +41,22 @@
                                 </HBox>-->
 							</VBox>
 						</HBox>
-						<HBox class="atm-details-popup-page-1-content-status">
+						<!--<HBox class="atm-details-popup-page-1-content-status">
 							<Label class="label" widht="180px" text="{i18n>atm_details_popover_label_gaurd} : "/>
 							<Label class="value" widht="80px" text=" {selectedATMModel>/gaurd/name} "/>
 							<Label class="value" widht="80px" text=" {selectedATMModel>/gaurd/phone} "/>
-						</HBox>
-						<VBox>
-							<Panel expandable="true" headerText="{i18n>atm_details_popover_label_location}" expanded="false" width="auto">
-								<content>
-									<!-- <Label  text="{i18n>atm_details_popover_label_location} : " />-->
-									<VBox>
+						</HBox>-->
+						<!--	<VBox>
+						<Panel expandable="true" headerText="{i18n>atm_details_popover_label_location}" expanded="false" width="auto">
+								<content>-->
+						<!-- <Label  text="{i18n>atm_details_popover_label_location} : " />-->
+						<!--			<VBox>
 										<Label text="{selectedATMModel>/location/area}"/>
 										<Label text="{selectedATMModel>/location/city}"/>
 									</VBox>
 								</content>
 							</Panel>
-						</VBox>
+						</VBox>-->
 						<!-- <VBox class="atm-details-popup-page-1-content-status sapUiSmallMarginTop">
                             <Label class="atm-details-popup-page-1-content-status-label" text="{i18n>atm_details_popover_label_overall_status} : " />
                             <ObjectStatus class="atm-details-popup-page-1-content-status-value" text="{ path : 'selectedATMModel>/status', formatter : '.Formatter.statusText'}" state="{ path : 'selectedATMModel>/status', formatter : '.Formatter.statusType'}" />
@@ -70,8 +70,19 @@
                             <Label class="atm-details-popup-page-1-content-location-value" text="{selectedATMModel>/location/area} {selectedATMModel>/location/city}" />
                         </VBox>-->
 						<VBox class="atm-details-popup-page-1-content-sensors sapUiSmallMarginTop">
-							<Label class="atm-details-popup-page-1-content-sensors-label" text="{i18n>atm_details_popover_label_sensors} : "/>
-							<Panel class="atm-details-popup-page-1-content-sensors-list" content="{selectedATMModel>/sensors}">
+							<!--	<Label class="atm-details-popup-page-1-content-sensors-label" text="{i18n>atm_details_popover_label_sensors} : "/>-->
+							<VBox>
+								<HBox>
+									<Label text="Possible Impact "/>
+									<Text text=": ATM may catch fire"/>
+								</HBox>
+								<HBox>
+									<Label text="Immediate Action"/>
+									<Text text=": Call nearest Fire Station"/>
+								</HBox>
+							</VBox>
+							<Panel expandable="true" class="atm-details-popup-page-1-content-sensors-list" headerText="{i18n>atm_details_popover_label_sensors} :"
+								content="{selectedATMModel>/sensors}">
 								<content>
 									<ObjectStatus class="sapUiSmallMarginBottom atm-details-popup-page-1-content-sensors-single"
 										text="{ path : 'selectedATMModel>type', formatter : '.Formatter.sensorText'}"
@@ -79,6 +90,102 @@
 										icon="{ path : 'selectedATMModel>type', formatter : '.Formatter.sensorIcon'}"/>
 								</content>
 							</Panel>
+						
+							<Toolbar class="sapUiMediumMarginTop">
+								<!--<Button icon="{selectedATMModel>/gaurd/img}"/>-->
+								<Image src="{selectedATMModel>/gaurd/img}" class="atm-details-popup-page-1-content-icon-img"/>
+								<!--<ToolbarSpacer/>-->
+								<Label text="{selectedATMModel>/gaurd/name}"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://call" tooltip="Call +91 99999 43210"/>
+							</Toolbar>
+							<Toolbar class="sapUiMediumMarginTop">
+								<!--<Button icon="{selectedATMModel>/gaurd/img}"/>-->
+								<Image src="{selectedATMModel>/img}" class="atm-details-popup-page-1-content-icon-img"/>
+								<!--<ToolbarSpacer/>-->
+								<Label text="SomaSunder"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://call" tooltip="Call +91 9999 200345"/>
+							</Toolbar>
+							
+							<Toolbar class="sapUiMediumMarginTop">
+								<!--<Button icon="{selectedATMModel>/gaurd/img}"/>-->
+								<Image src="/images/police.png" class="atm-details-popup-page-1-content-icon-img"/>
+								<!--<ToolbarSpacer/>-->
+								<Label text="Police Control Room"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://call" tooltip="100"/>
+							</Toolbar>
+							
+							
+							<Toolbar class="sapUiMediumMarginTop">
+								<!--<Button icon="{selectedATMModel>/gaurd/img}"/>-->
+								<Image src="/images/fire.png" class="atm-details-popup-page-1-content-icon-img"/>
+								<!--<ToolbarSpacer/>-->
+								<Label text="Fire Station Marathalli"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://call" tooltip="102"/>
+							</Toolbar>
+							
+							
+							
+							<!--<mc:AreaMicroChart width="164px" height="74px" minXValue="0" maxXValue="100" minYValue="0" maxYValue="100" class="sapUiSmallMargin"-->
+							<!--	press="press">-->
+							<!--	<mc:firstXLabel>-->
+							<!--		<mc:AreaMicroChartLabel label="June 1" color="Good"/>-->
+							<!--	</mc:firstXLabel>-->
+							<!--	<mc:lastXLabel>-->
+							<!--		<mc:AreaMicroChartLabel label="June 30" color="Critical"/>-->
+							<!--	</mc:lastXLabel>-->
+							<!--	<mc:firstYLabel>-->
+							<!--		<mc:AreaMicroChartLabel label="0M" color="Good"/>-->
+							<!--	</mc:firstYLabel>-->
+							<!--	<mc:lastYLabel>-->
+							<!--		<mc:AreaMicroChartLabel label="80M" color="Critical"/>-->
+							<!--	</mc:lastYLabel>-->
+							<!--	<mc:chart>-->
+							<!--		<mc:AreaMicroChartItem>-->
+							<!--			<mc:points>-->
+							<!--				<mc:AreaMicroChartPoint x="0" y="0"/>-->
+							<!--				<mc:AreaMicroChartPoint x="30" y="20"/>-->
+							<!--				<mc:AreaMicroChartPoint x="60" y="20"/>-->
+							<!--				<mc:AreaMicroChartPoint x="100" y="80"/>-->
+							<!--			</mc:points>-->
+							<!--		</mc:AreaMicroChartItem>-->
+							<!--	</mc:chart>-->
+							<!--	<mc:target>-->
+							<!--		<mc:AreaMicroChartItem>-->
+							<!--			<mc:points>-->
+							<!--				<mc:AreaMicroChartPoint x="0" y="0"/>-->
+							<!--				<mc:AreaMicroChartPoint x="30" y="30"/>-->
+							<!--				<mc:AreaMicroChartPoint x="60" y="40"/>-->
+							<!--				<mc:AreaMicroChartPoint x="100" y="90"/>-->
+							<!--			</mc:points>-->
+							<!--		</mc:AreaMicroChartItem>-->
+							<!--	</mc:target>-->
+							<!--	<mc:maxThreshold>-->
+							<!--		<mc:AreaMicroChartItem color="Good">-->
+							<!--			<mc:points>-->
+							<!--				<mc:AreaMicroChartPoint x="0" y="0"/>-->
+							<!--				<mc:AreaMicroChartPoint x="30" y="40"/>-->
+							<!--				<mc:AreaMicroChartPoint x="60" y="50"/>-->
+							<!--				<mc:AreaMicroChartPoint x="100" y="100"/>-->
+							<!--			</mc:points>-->
+							<!--		</mc:AreaMicroChartItem>-->
+							<!--	</mc:maxThreshold>-->
+							<!--	<mc:minThreshold>-->
+							<!--		<mc:AreaMicroChartItem color="Error">-->
+							<!--			<mc:points>-->
+							<!--				<mc:AreaMicroChartPoint x="0" y="0"/>-->
+							<!--				<mc:AreaMicroChartPoint x="30" y="20"/>-->
+							<!--				<mc:AreaMicroChartPoint x="60" y="30"/>-->
+							<!--				<mc:AreaMicroChartPoint x="100" y="70"/>-->
+							<!--			</mc:points>-->
+							<!--		</mc:AreaMicroChartItem>-->
+							<!--	</mc:minThreshold>-->
+							<!--</mc:AreaMicroChart>-->
+							<!--<l:SimpleForm maxContainerCols="3" layout="ResponsiveLayout">-->
+							<!--</l:SimpleForm>-->
 						</VBox>
 					</VBox>
 				</content>
@@ -87,12 +194,15 @@
 						<Button visible="{= ${selectedATMModel>/pinned}.toString() === 'false' }" icon="sap-icon://pushpin-on" press="pinToKiosk"/>
 						<Button visible="{selectedATMModel>/pinned}" type="Reject" icon="sap-icon://pushpin-off" press="deletePin"/>
 						<ToolbarSpacer/>
-						<Button text="{i18n>atm_details_popover_button_create_ticket}" press="goToActions"/>
-						<Button icon="sap-icon://call" tooltip="Call +91 99999 43210"/>
+						<Button text="{i18n>atm_details_popover_button_create_ticket}" press="goToActions" visible="false"/>
+						<!--<Button icon="sap-icon://call" tooltip="Call +91 99999 43210"/>-->
 						<Button icon="sap-icon://video" press="handlePressVideo"/>
-						<Button icon="sap-icon://task" tooltip="Ticket Management"/>
+						<Button icon="sap-icon://task" tooltip="Ticket Management" press="goToActions"/>
 						<Button icon="sap-icon://microphone"></Button>
 						<Button icon="sap-icon://marketing-campaign"></Button>
+						<Button icon="sap-icon://sys-help" ></Button>
+						<!--press="onDialogWithSizePress"-->
+					
 					</Toolbar>
 				</footer>
 			</Page>
@@ -164,28 +274,26 @@
 											<Text text="Possible solution – Check for any short circuit and fix it immediately."/>-->
 										</VBox>
 									</HBox>
-										<HBox><VBox><Label text="Comments: "/></VBox>
-								<VBox>	<TextArea
-									width="300px"
-									editable="true"
-									rows="5"
-									cols="10"
-									height=""
-								></TextArea></VBox>	</HBox>
+									<HBox>
+										<VBox><Label text="Comments: "/></VBox>
+										<VBox>
+											<TextArea width="210px" editable="true" rows="5" cols="10" height=""></TextArea>
+										</VBox>
+									</HBox>
 								</VBox>
 							</f:content>
 						</f:SimpleForm>
 					</VBox>
 				</content>
 				<footer>
-			<Toolbar>
-				<content>
-					<ToolbarSpacer />
-					<Button text="Save" />
-					<Button text="Close" />
-				</content>
-			</Toolbar>
-		</footer>
+					<Toolbar>
+						<content>
+							<ToolbarSpacer/>
+							<Button text="Save"/>
+							<Button text="Close"/>
+						</content>
+					</Toolbar>
+				</footer>
 			</Page>
 		</NavContainer>
 	</Popover>

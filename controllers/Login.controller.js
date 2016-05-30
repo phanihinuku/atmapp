@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 
-	return Controller.extend("ipms.atm.app.views.controller.Login", {
+	return Controller.extend("ipms.atm.app.controllers.Login", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -13,6 +13,10 @@ sap.ui.define([
 		//	onInit: function() {
 		//
 		//	},
+		handleLogin:function(){
+			sap.ui.core.UIComponent.getRouterFor(this).navTo("Dashboard");
+		}
+
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

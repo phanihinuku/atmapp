@@ -1,22 +1,40 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ipms.atm.app.controllers.Login" 
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:form="sap.ui.commons.form">
-	<App>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ipms.atm.app.controllers.Login"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout.form">
+	<App backgroundImage="/images/bg.jpg">
 		<pages>
-			<Page title="Login">
+			<Page title="ATM Monitoring Dashboard" class="myBackgroundStyle" >
 				<content>
-					<form:SimpleForm width="50%" maxContainerCols="3" layout="ResponsiveLayout">
-						<form:title> <core:Title></core:Title></form:title>
-						<form:content>
-						<Input id="idUsername" type="Text" placeholder="Username" width="50%"></Input>
-						<Input id="idPassword" type="Password" placeholder="Password" width="50%"></Input>
-						<Button id="idLogin" text="Login" width="50%"></Button>
-						</form:content>
-						<form:title> <core:Title></core:Title></form:title>
-					</form:SimpleForm>
+					<FlexBox class="mainpageBG" justifyContent="Center">
+						<l:SimpleForm  maxContainerCols="3" layout="ResponsiveLayout">
+							<VBox justifyContent="Center">
+								<!--<Image src="images/logo_login.png"  />-->
+								<Text/>
+								<Text/>
+								<Text/>
+								<!-- <Label text="{i18n>labelUsername}" /> -->
+								<Input id="idEmail" type="Text" value="PACERS" placeholder="{i18n>labelUsername}"/>
+								<!-- <Label text="{i18n>labelPassword}" /> -->
+								<Input id="idPwd" type="Password" value="welcome" placeholder="{i18n>labelPassword}"/>
+								<Text/>
+								<Text/>
+								<Button id="idBtnLogin" text="Login" width="100%" press="handleLogin" type="Emphasized"/>
+								<!--<Button id="idBtnForgot" text="Cancel" width="100%" press="handleForgotLogin" type="Emphasized"/>-->
+							</VBox>
+						</l:SimpleForm>
+				
+					<!--<Carousel loop="true">-->
+					<!--	<pages>-->
+							<!--<Image src="/images/atm1.jpg" />-->
+					<!--		<Image src="/images/atm2.jpg" />-->
+					<!--		<Image src="/images/atm3.jpg" />-->
+							<!--<Image src="/images/atm4.jpg" />-->
+					<!--	</pages>-->
+					<!--</Carousel>-->
+						</FlexBox>
 				</content>
 				<footer>
 					<Bar>
-						<contentLeft><Label text="@SAP ..."></Label></contentLeft>
+						<!--	<contentLeft><Label text="@SAP ..."></Label></contentLeft>-->
 					</Bar>
 				</footer>
 			</Page>

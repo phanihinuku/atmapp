@@ -3,11 +3,13 @@
         "lat": 12.960430,
         "lng": 77.716329
     },
-    "points": [{
+    "points": [
+    	{
             "name": "Allahabad Bank",
             "img": "./images/ald-icon.png",
             "id": "ALD25471",
             "status": "critical",
+            "marker-icon":"./images/R_AB_24X24.png",
             "status-icon":"./images/red_dot.png",
             "location": {
                 "address": "No 135",
@@ -50,12 +52,14 @@
                 "lng": 77.7143634
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "HDFC Bank",
              "img": "./images/hdfc-icon.png",
             "id": "HDFC25471",
             "status": "normal",
             "status-icon":"./images/green_dot.png",
+            "marker-icon":"./images/G_HDFC_24X24.png",
             "location": {
                 "address": "Hypercity",
                 "area": "Kundalahalli Gate",
@@ -97,10 +101,13 @@
                 "lng": 77.71297643
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "IndusInd Bank",
             "id": "INI25471",
             "status": "critical",
+             "status-icon":"./images/red_dot.png",
+            "marker-icon":"./images/Red_24X24.png",
             "location": {
                 "address": "No 135",
                 "area": "Outer Ring Road, Near-Indusland Bank, Marathahalli",
@@ -149,6 +156,8 @@
             "name": "Canara Bank",
             "id": "CB25471",
             "status": "normal",
+             "marker-icon":"./images/Green_24X24.png",
+        	"status-icon":"./images/green_dot.png",
             "location": {
                 "address": "Sanjaya Nagar",
                 "area": "Marathahalli",
@@ -190,12 +199,15 @@
                 "lng": 77.6911982
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "State Bank of Mysore",
             "img": "./images/sbi-icon.png",
             "id": "SBI25471",
             "status": "critical",
-            "status-icon":"./images/red_dot.png",
+            "marker-icon":"./images/Red_24X24.png",
+        	"status-icon":"./images/red_dot.png",
+        	
             "location": {
                 "address": "No.1, S V M Complex, Ashwathanagar,",
                 "area": "Marathahalli",
@@ -237,11 +249,13 @@
                 "lng": 77.6911985
             },
             "pinned": false
-        }, {
+        },
+        {
             "name": "ICICI Bank",
             "id": "ICICI1234",
             "status": "normal",
             "status-icon":"./images/green_dot.png",
+               "marker-icon":"./images/Green_24X24.png",
             "location": {
                 "address": "Outer Ring Road",
                 "area": "Bellandur",
@@ -283,12 +297,16 @@
                 "lng": 77.6762463
             },
             "pinned": false
-        }, {
+        },
+        
+        {
             "name": "AXIS Bank",
              "img": "./images/axis-icon.png",
             "id": "AXIS25471",
             "status": "medium",
             "status-icon":"./images/orange_dot.png",
+             "marker-icon":"./images/Amber_24X24.png",
+        
             "location": {
                 "address": "BrandFactory, Old Airport Road",
                 "area": "Marathahalli",
@@ -330,10 +348,13 @@
                 "lng": 77.6912182
             },
             "pinned": false
-        }, {
+        },
+        {
             "name": "CITI Bank",
             "id": "CITI25471",
             "status": "normal",
+             "marker-icon":"./images/G_CITI_24X24.png",
+             "status-icon":"green_dot.png",
             "location": {
                 "address": "Old Airport Road",
                 "area": "Marathahalli",
@@ -375,12 +396,15 @@
                 "lng": 77.9911982
             },
             "pinned": false
-        }, {
+        },
+        
+        {
             "name": "AXIS Bank",
              "img": "./images/sbi-icon.png",
             "id": "AXIS12345",
             "status": "critical",
             "status-icon":"./images/red_dot.png",
+             "marker-icon":"./images/Red_24X24.png",
             "location": {
                 "address": "Varthur Main Road, Near-Akshay Mallya Hospital, ",
                 "area": "Varthur",
@@ -422,12 +446,14 @@
                 "lng": 77.1911982
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "HDFC Bank",
              "img": "./images/hdfc-icon.png",
             "id": "HDFC25472",
             "status": "normal",
             "status-icon":"./images/green_dot.png",
+            "marker-icon":"./images/G_HDFC_24X24.png",
             "location": {
                 "address": "Hypercity",
                 "area": "Kundalahalli Gate",
@@ -469,12 +495,14 @@
                 "lng": 77.9911982
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "State Bank Of India",
              "img": "./images/sbi-icon.png",
             "id": "SBI12345",
             "status": "critical",
-            "status-icon":"./images/red_dot.png",
+            "marker-icon":"./images/R_SBI_24X24.png",
+             "status-icon":"./images/red_dot.png",
             "location": {
                 "address": "SGR Dental College Rd, Chandra Layout, ",
                 "area": "Kundalahalli Gate Signal",
@@ -516,10 +544,13 @@
                 "lng": 77.2911982
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "Canara Bank",
             "id": "CB25472",
             "status": "normal",
+             "status-icon":"./images/green_dot.png",
+              "marker-icon":"./images/Green_24X24.png",
             "location": {
                 "address": "Aswath Nagar",
                 "area": "Kundalahalli Gate",
@@ -561,10 +592,14 @@
                 "lng": 77.1111982
             },
             "pinned": false
-        }, {
+        }, 
+        
+        {
             "name": "ICICI Bank",
             "id": "ICICI25472",
             "status": "critical",
+             "status-icon":"./images/red_dot.png",
+             "marker-icon":"./images/Red_24X24.png",
             "location": {
                 "address": "Ashwathanagar",
                 "area": "Kundalahalli Gate Signal",
@@ -606,10 +641,14 @@
                 "lng": 77.1911982
             },
             "pinned": false
-        }, {
+        }, 
+        
+        {
             "name": "ICICI Bank",
             "id": "ICICI25471",
             "status": "medium",
+             "status-icon":"./images/orange_dot.png",
+             "marker-icon":"./images/Amber_24X24.png",
             "location": {
                 "address": "JP Royale- 90/4, Opposite Innovative",
                 "area": "Kundalahalli Gate",
@@ -651,10 +690,14 @@
                 "lng": 77.2911982
             },
             "pinned": false
-        }, {
+        }, 
+        
+        {
             "name": "CITI Bank",
             "id": "CITI25472",
             "status": "critical",
+             "status-icon":"./images/red_dor.png",
+             "marker-icon":"./images/R_CITI_24X24.png",
             "location": {
                 "address": "No 135",
                 "area": "Kundalahalli Gate Signal",
@@ -696,10 +739,13 @@
                 "lng": 77.3911982
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "DCB Bank",
             "id": "DCB25471",
             "status": "normal",
+             "status-icon":"./images/green_dot.png",
+              "marker-icon":"./images/Green_24X24.png",
             "location": {
                 "address": "SGR Dental College Rd, Belandur,",
                 "area": "Kundalahalli Gate",
@@ -741,10 +787,13 @@
                 "lng": 77.4211982
             },
             "pinned": false
-        }, {
+        }, 
+        {
             "name": "Deutsche Bank",
             "id": "DB25471",
             "status": "critical",
+             "status-icon":"./images/red_dot.png",
+              "marker-icon":"./images/Red_24X24.png",
             "location": {
                 "address": "Sarjapur Main Rd, ",
                 "area": "Bellandur",
